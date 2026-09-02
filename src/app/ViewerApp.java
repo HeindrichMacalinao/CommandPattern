@@ -10,6 +10,7 @@ public class ViewerApp {
         TV tv = new TV();
         Light light = new Light();
         Thermostat thermostat = new Thermostat();
+        MusicPlayer musicPlayer = new MusicPlayer();
 
         RemoteControl rc = new RemoteControl();
 
@@ -42,6 +43,11 @@ public class ViewerApp {
         rc.setCommand(new IncreaseTemperature(thermostat));
         System.out.println(rc.clickButton());
 
-        // Commands for
+        // Commands for Music Player
+        rc.setCommand(new PlayMusic(musicPlayer));
+        System.out.println(rc.clickButton());
+
+        rc.setCommand(new PauseMusic(musicPlayer));
+        System.out.println(rc.clickButton());
     }
 }
