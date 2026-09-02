@@ -49,5 +49,11 @@ public class ViewerApp {
 
         rc.setCommand(new PauseMusic(musicPlayer));
         System.out.println(rc.clickButton());
+
+        rc.setCommand(new IncreaseMusicVolume(musicPlayer));
+        System.out.println(rc.clickButton());
+
+        rc.setCommand(new DecreaseMusicVolume(musicPlayer));
+        System.out.println(rc.clickButton());
     }
 }
